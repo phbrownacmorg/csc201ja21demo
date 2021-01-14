@@ -15,7 +15,7 @@ import rangedemo
 import sumlist
 
 def main(args:List[str]) -> int:
-    return futureval_clamped.main(args)
+    return fact.main(args)
 
 if __name__ == '__main__':
     import sys
