@@ -1,5 +1,13 @@
 [[package]]
 category = "main"
+description = "John Zelles graphics.py package, for use with the textbook \"Python Programming: An Introduction to Computer Science\""
+name = "graphics.py"
+optional = false
+python-versions = "*"
+version = "5.0.1.post1"
+
+[[package]]
+category = "main"
 description = "Optional static typing for Python"
 name = "mypy"
 optional = false
@@ -39,10 +47,13 @@ python-versions = "*"
 version = "3.7.4.3"
 
 [metadata]
-content-hash = "758b63b6a534dd337f4b29dedabd9eef8ab1397f5e385e0f60f3ea934072bf2c"
+content-hash = "df5b87397540dc2d26629385ad3a97c55e97ba5964e38ec99c76f898c94c0010"
 python-versions = "^3.8"
 
 [metadata.files]
+"graphics.py" = [
+    {file = "graphics.py-5.0.1.post1.tar.gz", hash = "sha256:583561cc577447e452fb2b1352c0fc615396b12b30dfbbce48e8190d2e330a97"},
+]
 mypy = [
     {file = "mypy-0.790-cp35-cp35m-macosx_10_6_x86_64.whl", hash = "sha256:bd03b3cf666bff8d710d633d1c56ab7facbdc204d567715cb3b9f85c6e94f669"},
     {file = "mypy-0.790-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:2170492030f6faa537647d29945786d297e4862765f0b4ac5930ff62e300d802"},
