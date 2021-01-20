@@ -2,7 +2,7 @@
 # Peter Brown, 2020-01-14
 
 from graphics import *
-from typing import List
+from typing import cast, List
 
 def main(args:List[str]) -> int:
     w:GraphWin = GraphWin("Click to close", 400, 400)
@@ -54,19 +54,19 @@ def main(args:List[str]) -> int:
 
     # Why doesn't this come out the same as before?
     # I didn't touch L1!
-    L1c:Point = L1.getCenter()
+    L1c = L1.getCenter()
     print('Center of L1: (', L1c.getX(), ',', L1c.getY(), ')', sep='')
 
-    L3:Line = L1.clone() # No aliasing; different objects
+    # No aliasing; different objects
+    L3:Line = cast(Line, L1.clone())
     # Change the object using the L3 name
     L3.draw(w)
     L3.move(150, 0)
 
     # Does come out same as before
-    L1c:Point = L1.getCenter()
+    L1c = L1.getCenter()
     print('Center of L1: (', L1c.getX(), ',', L1c.getY(), ')', sep='')
     
-
     # Listen for a mouse click before closing
     w.getMouse()
     w.close()
