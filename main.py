@@ -5,9 +5,12 @@ from typing import List
 
 import chaos
 import chaos_clamped
+import chasethemouse
+import color_entry
 import covid_graph
 import covid_graph_coords
 import CtoF
+import CtoF_entry
 import graphicsdemo
 import fact
 import futureval
@@ -18,7 +21,7 @@ import rangedemo
 import sumlist
 
 def main(args:List[str]) -> int:
-    return covid_graph_coords.main(args)
+    return color_entry.main(args)
 
 if __name__ == '__main__':
     import sys
