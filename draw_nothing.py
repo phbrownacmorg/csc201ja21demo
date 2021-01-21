@@ -1,5 +1,5 @@
 # Do nothing with graphics, successfully
-# Peter Brown, 2020-01-14
+# Peter Brown <peter.brown@converse.edu>, 2020-01-14
 
 from graphics import *
 from typing import List

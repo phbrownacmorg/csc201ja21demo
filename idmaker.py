@@ -6,7 +6,7 @@ from typing import List
 def main(args:List[str]) -> int:
     # Get the name
     # Entering last-name first handles spaces, etc., in last names
-    name:str = input('Please enter your full name, last name first: ')
+    name:str = input('Please enter your full name in the form last, first middle: ')
 
     # Figure out the ID
 
