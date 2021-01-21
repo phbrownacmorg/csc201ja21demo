@@ -15,13 +15,15 @@ import graphicsdemo
 import fact
 import futureval
 import futureval_clamped
+import idmaker
 import pounds_to_stone
 import quadratic
 import rangedemo
 import sumlist
+import stringdemo
 
 def main(args:List[str]) -> int:
-    return color_entry.main(args)
+    return idmaker.main(args)
 
 if __name__ == '__main__':
     import sys
