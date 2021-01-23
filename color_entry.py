@@ -7,7 +7,7 @@ from typing import List
 def main(args:List[str]) -> int:
     w:GraphWin = GraphWin("Set a color", 400, 400)
     w.setCoords(-1, -1, 1, 1)
-    fontSize:float = 8
+    fontSize:int = 8
 
     c_label:Text = Text(Point(0, 0.8), '')
     c_label.setText('Color (named): ')

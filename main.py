@@ -26,7 +26,7 @@ import sumlist
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return formatdemo.main(args)
+    return stringdemo.main(args)
 
 if __name__ == '__main__':
     import sys

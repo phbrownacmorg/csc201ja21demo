@@ -21,7 +21,7 @@ def main(args:List[str]) -> int:
     # Dates
     today:date = date.today()
     print(today.year, today.month, today.day)
-    month_abbrs:Tuple[str] = ('', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    month_abbrs:Tuple[str, ...] = ('', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
             'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
     # Two-digit year
     # Usual American format (two-digit year)

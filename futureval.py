@@ -1,4 +1,4 @@
-# Calculate the future value of an investment
+python # Calculate the future value of an investment
 # Peter Brown <peter.brown@converse.edu>, 2021-01-12
 
 from typing import List
