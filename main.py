@@ -5,6 +5,7 @@ from typing import List
 
 import chaos
 import chaos_clamped
+import chaos_files
 import chaos_format
 import chasethemouse
 import color_entry
@@ -19,6 +20,7 @@ import fact
 import futureval
 import futureval_clamped
 import idmaker
+import idmaker_files
 import pounds_to_stone
 import quadratic
 import rangedemo
@@ -26,7 +28,7 @@ import sumlist
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return stringdemo.main(args)
+    return idmaker_files.main(args)
 
 if __name__ == '__main__':
     import sys
