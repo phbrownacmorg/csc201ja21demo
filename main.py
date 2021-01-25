@@ -13,6 +13,7 @@ import covid_graph
 import covid_graph_coords
 import CtoF
 import CtoF_entry
+import CtoF_fns
 import drawline
 import formatdemo
 import graphicsdemo
@@ -21,6 +22,8 @@ import futureval
 import futureval_clamped
 import idmaker
 import idmaker_files
+import old_macdonald
+import old_macdonald_fns
 import pounds_to_stone
 import quadratic
 import rangedemo
@@ -28,7 +31,7 @@ import sumlist
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return idmaker_files.main(args)
+    return CtoF_fns.main(args)
 
 if __name__ == '__main__':
     import sys
