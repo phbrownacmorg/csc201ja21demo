@@ -13,6 +13,7 @@ def printVerse(animals:str, sound:str) -> None:
 
 
 def main(args:List[str]) -> int:
+
     printVerse('cows', 'moo')
     printVerse('ducks', 'quack')
     printVerse('sheep', 'baa')

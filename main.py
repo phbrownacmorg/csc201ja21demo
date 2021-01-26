@@ -18,20 +18,24 @@ import drawline
 import formatdemo
 import graphicsdemo
 import fact
+import fact_fns
 import futureval
 import futureval_clamped
+import futureval_fns
 import idmaker
 import idmaker_files
 import old_macdonald
 import old_macdonald_fns
 import pounds_to_stone
 import quadratic
+import quadratic_fns
 import rangedemo
 import sumlist
+import sumlist_fns
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return CtoF_fns.main(args)
+    return futureval_fns.main(args)
 
 if __name__ == '__main__':
     import sys
