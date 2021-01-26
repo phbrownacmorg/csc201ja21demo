@@ -8,6 +8,7 @@ import chaos_clamped
 import chaos_files
 import chaos_format
 import chasethemouse
+import chasethemouse_fns
 import color_entry
 import covid_graph
 import covid_graph_coords
@@ -35,7 +36,7 @@ import sumlist_fns
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return futureval_fns.main(args)
+    return chasethemouse_fns.main(args)
 
 if __name__ == '__main__':
     import sys

@@ -81,7 +81,7 @@ def drawGraph(amounts:List[float]) -> None:
     w.close()
 
 def main(args:List[str]) -> int:
-    P, rate, periods = readParams() # type: Tuple(float, float, int)
+    P, rate, periods = readParams() # type: Tuple[float, float, int]
     amounts:List[float] = calcFutureval(P, rate, periods)
     printTable(P, rate, amounts)
     drawGraph(amounts)
