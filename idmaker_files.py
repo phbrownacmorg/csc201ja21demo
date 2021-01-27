@@ -25,7 +25,7 @@ def id_from_line(inputline:str) -> str:
         middlename = namelist[2]
 
     # Strip suffix off last name
-    suffixes:Tuple[str] = ('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'VI')
+    suffixes:Tuple[str,...] = ('Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'VI')
     lastnamelist:List[str] = namelist[0].split(',')
     if len(lastnamelist) == 1: # Comma didn't split anything, try a space
         lastnamelist = namelist[0].split(' ')

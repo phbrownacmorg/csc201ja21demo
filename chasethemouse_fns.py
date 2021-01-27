@@ -56,7 +56,7 @@ def makeNose(center:Point, r:float) -> Polygon:
     nose.setOutline('black')
     return nose
 
-def makeMouth(center:Point, r:float) -> Tuple[Line, Line]:
+def makeMouth(center:Point, r:float) -> Tuple[Line, Line, Line]:
     cx:float = center.getX()
     cy:float = center.getY()
     middlePt:Point = Point(cx, cy - r * 0.4)

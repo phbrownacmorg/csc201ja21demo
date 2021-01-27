@@ -1,7 +1,7 @@
 # Solve a quadratic equation
 # Peter Brown <peter.brown@converse.edu>, 2021-01-12
 
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 import math # So Python knows that the name "math" means to go look in the math library
 
 # Input
@@ -14,11 +14,14 @@ def readCoefficients() -> Tuple[float, float, float]:
     return a, b, c
 
 # Process
-def findRoots(a:float, b:float, c:float) -> Tuple[float, float]:
-    """Given the coefficients a, b, and c of a quadratic equation, find and return its roots."""
+def findRoots(a:float, b:float, c:float) -> Tuple[Optional[float], Optional[float]]:
+    """Given the coefficients a, b, and c of a quadratic equation, find and return its roots.  If the equation has no real roots, the tuple (None, None) is returned."""
     det:float = b**2 - 4*a*c
-    root1:float = (-b + math.sqrt(det)) / (2*a)
-    root2:float = (-b - math.sqrt(det)) / (2*a)
+    root1:Optional[float] = None
+    root2:Optional[float] = None
+    if det >= 0:
+        root1 = (-b + math.sqrt(det)) / (2*a)
+        root2 = (-b - math.sqrt(det)) / (2*a)
     return root1, root2
 
 def main(args:List[str]) -> int:
@@ -28,7 +31,10 @@ def main(args:List[str]) -> int:
     # Find the roots (if they exist)
     root1, root2 = findRoots(a, b, c)
     # Print the roots
-    print('The roots are', root1, 'and', root2)
+    if root1 is None: # in which case root2 is None also
+        print('The system has no real roots.')
+    else:
+        print('The roots are', root1, 'and', root2)
 
     return 0
 

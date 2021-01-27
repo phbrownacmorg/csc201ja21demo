@@ -3,6 +3,7 @@
 
 from typing import List
 
+import bmi
 import chaos
 import chaos_clamped
 import chaos_files
@@ -36,7 +37,7 @@ import sumlist_fns
 import stringdemo
 
 def main(args:List[str]) -> int:
-    return chasethemouse_fns.main(args)
+    return bmi.main(args)
 
 if __name__ == '__main__':
     import sys
