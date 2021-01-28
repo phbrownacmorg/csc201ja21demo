@@ -3,11 +3,21 @@
 
 from typing import List
 
+def article(word:str) -> str:
+    """Takes a word and returns the correct article ("a" or "an")
+    to use with that article."""
+    art:str = 'a'
+    # 'Y' is so seldom a beginning vowel in English that we'll ignore it
+    if word[0].lower() in ('a', 'e', 'i', 'o', 'u'):
+        art = 'an'
+    return art
+
 def printVerse(animals:str, sound:str) -> None:
+    art:str = article(sound)
     print('Old MacDonald had a farm, E-I-E-I-O!')
     print('And on that farm he had some {0}, E-I-E-I-O!'.format(animals))
-    print('With a {0}, {0} here and a {0}, {0} there,'.format(sound))
-    print('Here a {0}, there a {0}, everywhere a {0}, {0},'.format(sound))
+    print('With {1} {0}, {0} here and {1} {0}, {0} there,'.format(sound, art))
+    print('Here {1} {0}, there {1} {0}, everywhere {1} {0}, {0},'.format(sound, art))
     print('Old MacDonald had a farm, E-I-E-I-O!')
     print()
 
