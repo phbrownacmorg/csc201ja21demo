@@ -2,6 +2,7 @@
 # Peter Brown, 2020-01-14
 
 from graphics import *
+from button import makeButton, inButton
 from typing import cast, List, Tuple
 import math
 
@@ -136,10 +137,12 @@ def main(args:List[str]) -> int:
 
     rodent:List[GraphicsObject] = makeMouse(Point(0,0), w)
     cat:List[GraphicsObject] = makeCat(Point(-1,1), w)
+    quitButton:Rectangle = makeButton(Point(-1, 1), Point(-0.6, 0.6), 'Quit', w)
+    quitButton.setFill('white')
 
-    numclicks:int = 5
-    for i in range(numclicks):
-        click:Point = w.getMouse()
+    # Indefinite loop--not known how many clicks the user wants
+    click:Point = w.getMouse()
+    while not inButton(click, quitButton):
         rodentPt:Point = animalCenter(rodent)
         dx:float = click.getX() - rodentPt.getX()
         dy:float = click.getY() - rodentPt.getY()
@@ -149,9 +152,8 @@ def main(args:List[str]) -> int:
         dx = rodentPt.getX() - catPt.getX()
         dy = rodentPt.getY() - catPt.getY()
         moveAnimal(cat, dx, dy)
+        click = w.getMouse() # Easy to forget--don't!
 
-    # Listen for a mouse click before closing
-    w.getMouse()
     w.close()
     return 0
 
