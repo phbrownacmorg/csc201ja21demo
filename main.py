@@ -7,8 +7,10 @@ import bmi
 import button
 import chaos
 import chaos_clamped
+import chaos_except
 import chaos_files
 import chaos_format
+import chaos_if
 import chasethemouse
 import chasethemouse_fns
 import color_entry
@@ -40,7 +42,7 @@ import stringdemo
 import validdate
 
 def main(args:List[str]) -> int:
-    return validdate.main(args)
+    return chaos_files.main(args)
 
 if __name__ == '__main__':
     import sys

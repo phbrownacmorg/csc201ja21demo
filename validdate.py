@@ -1,4 +1,4 @@
-# Determine whether a date is a valid Gragorian date
+# Determine whether a date is a valid Gregorian date
 # Peter Brown <peter.brown@converse.edu>, 2021-01-28
 
 from typing import List, Optional, Tuple
@@ -9,7 +9,7 @@ def parseDateString(dateStr:str) -> Tuple[Optional[int], Optional[int], Optional
     day:Optional[int] = None
     year:Optional[int] = None
     dateparts:List[str] = dateStr.split('/')
-    # print(dateparts)
+    #print(dateparts)
     if len(dateparts) == 3:
         month = int(dateparts[0].strip())
         day = int(dateparts[1].strip())
@@ -36,15 +36,7 @@ def validDay(month:int, day:int, year:int) -> bool:
         valid = False
     return valid
 
-def validDate(dateStr:str) -> bool:
-    valid:bool = True
-    month, day, year = parseDateString(dateStr) # type: Optional[int], Optional[int], Optional[int]
-    if month is None: # The string didn't parse into exactly three integers
-        valid = False
-    else: # Parsing OK, keep going
-        valid = validYear(year) and validMonth(month) and validDay(month, day, year)
-
-    return valid
+ 
 
 def main(args:List[str]) -> int:
     # Read a date from the keyboard

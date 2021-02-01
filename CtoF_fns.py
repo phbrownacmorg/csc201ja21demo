@@ -17,11 +17,15 @@ def printResults(degC:float, degF:float) -> None:
 
 def main(args:List[str]) -> int:
     # Get the Celsius temperature
-    degC:float = readCelsius()
-    # Convert it to Fahrenheit
-    degF:float = convert_CtoF(degC)
-    # Output the result
-    printResults(degC, degF)
+    try:
+        degC:float = readCelsius()
+    except ValueError:
+        print('Celsius temperature must be a number.')
+    else:
+        # Convert it to Fahrenheit
+        degF:float = convert_CtoF(degC)
+        # Output the result
+        printResults(degC, degF)
 
     return 0
 
