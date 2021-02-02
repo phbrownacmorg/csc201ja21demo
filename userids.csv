@@ -1,5 +1,5 @@
-userid	lastname	firstname	middlename
-phbrown001	Brown	Peter	H.
+userid	lastname	firstname	middlename	birthdate
+phbrown001	Brown	Peter	H.	1963-02-03
 lbui001	Bui	LaVang
 gkcuevas001	Cuevas	Gabrielle	Karissa
 tdmaloney001	Maloney	Teana	D.
@@ -8,7 +8,7 @@ ttnguyen001	Nguyen	Tera	Truc
 dnquiller001	Quiller	Deja	N.
 mrreece-henderson001	Reece-Henderson	Madison	Rivers
 inwilkes001	Wilkes	Isobel	Nicole
-mavonrichthofen001	von Richthofen	Manfred	Albrecht
-bfobrian001	O'Brian	Brian	Finian
-rlgriffin001	Griffin III	Robert	Lee
-abbrown001	Brown, Jr.	Alfred	Bruce
+mavonrichthofen001	von Richthofen	Manfred	Albrecht	1892-05-02
+pjobrien001	O'Brien	Patrick	Joseph	1835-03-17
+rlgriffin001	Griffin III	Robert	Lee	1990-02-12
+abbrown001	Brown, Jr.	Alfred	Bruce	1920-05-11
