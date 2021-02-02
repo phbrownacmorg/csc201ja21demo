@@ -30,7 +30,9 @@ import futureval_while
 import graphicsdemo
 import idmaker
 import idmaker_files
+import lab16
 import leapyear
+import loop_patterns
 import old_macdonald
 import old_macdonald_fns
 import pounds_to_stone
@@ -40,10 +42,11 @@ import rangedemo
 import sumlist
 import sumlist_fns
 import stringdemo
+import userdict
 import validdate
 
 def main(args:List[str]) -> int:
-    return futureval_while.main(args)
+    return userdict.main(args)
 
 if __name__ == '__main__':
     import sys
