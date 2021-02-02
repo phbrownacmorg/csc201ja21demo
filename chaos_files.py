@@ -46,7 +46,7 @@ def main(args:List[str]) -> int:
     infilename:str = 'chaos-in.csv'
     outfilename:str = 'chaos-out.txt'
 
-    inputVals:List[Tuple[float, str]] = readInput(infilename)
+    inputVals:List[Tuple[float, int]] = readInput(infilename)
     doChaos(inputVals, outfilename)    
     return 0
 

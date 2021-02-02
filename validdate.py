@@ -1,7 +1,7 @@
 # Determine whether a date is a valid Gregorian date
 # Peter Brown <peter.brown@converse.edu>, 2021-01-28
 
-from typing import List, Optional, Tuple
+from typing import cast, List, Optional, Tuple
 from leapyear import isLeapYear
 
 def parseDateString(dateStr:str) -> Tuple[Optional[int], Optional[int], Optional[int]]:
@@ -36,7 +36,18 @@ def validDay(month:int, day:int, year:int) -> bool:
         valid = False
     return valid
 
- 
+def validDate(dateStr:str) -> bool:
+    valid:bool = True
+    month, day, year = parseDateString(dateStr)
+    if month is None or day is None or year is None:
+        valid = False
+    elif not validYear(year):
+        valid = False
+    elif not validMonth(month):
+        valid = False
+    elif not validDay(month, day, year):
+        valid = False
+    return valid    
 
 def main(args:List[str]) -> int:
     # Read a date from the keyboard

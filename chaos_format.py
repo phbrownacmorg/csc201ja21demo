@@ -1,12 +1,12 @@
 # A simple program illustrating chaotic behavior
 # Peter Brown <peter.brown@converse.edu>, 2020-02-01
 
-from typing import List, Optional
+from typing import List
 import math
 
 def validateInput(inputStr:str) -> float:
     bogus_initial_value:float = float('nan')
-    x: Optional[float] = bogus_initial_value
+    x:float = bogus_initial_value
     valid:bool = True
     # First: is this a number at all?
     for c in inputStr:
