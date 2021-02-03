@@ -29,7 +29,7 @@ def id_from_line(inputline:str) -> str:
     lastnamelist:List[str] = namelist[0].split(',')
     if len(lastnamelist) == 1: # Comma didn't split anything, try a space
         lastnamelist = namelist[0].split(' ')
-    print(lastnamelist)
+    #print(lastnamelist)
     if len(lastnamelist) > 1 and lastnamelist[-1].strip() in suffixes:
         lastnamelist = lastnamelist[:-1]
     lastname:str = ''.join(lastnamelist).replace("'", '').replace(' ','')

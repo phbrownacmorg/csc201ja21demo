@@ -14,11 +14,11 @@ def readCoefficients() -> Tuple[float, float, float]:
     return a, b, c
 
 # Process
-def findRoots(a:float, b:float, c:float) -> Tuple[Optional[float], Optional[float]]:
+def findRoots(a:float, b:float, c:float) -> Tuple[float, float]:
     """Given the coefficients a, b, and c of a quadratic equation, find and return its roots.  If the equation has no real roots, the tuple (None, None) is returned."""
     det:float = b**2 - 4*a*c
-    root1 = (-b + math.sqrt(det)) / (2*a)
-    root2 = (-b - math.sqrt(det)) / (2*a)
+    root1:float = (-b + math.sqrt(det)) / (2*a)
+    root2:float = (-b - math.sqrt(det)) / (2*a)
     return root1, root2
 
 def main(args:List[str]) -> int:
