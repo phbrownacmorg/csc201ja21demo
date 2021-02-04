@@ -20,6 +20,7 @@ import CtoF
 import CtoF_entry
 import CtoF_fns
 import drawline
+import draw_triangle
 import fact
 import fact_fns
 import formatdemo
@@ -46,7 +47,7 @@ import userdict
 import validdate
 
 def main(args:List[str]) -> int:
-    return userdict.main(args)
+    return draw_triangle.main(args)
 
 if __name__ == '__main__':
     import sys
